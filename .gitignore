@@ -17,3 +17,4 @@ npm-debug.log
 testem.log
 /config/flickrAPI.js
 /config/gmapsAPI.js
+/vendor/gmaps.js
