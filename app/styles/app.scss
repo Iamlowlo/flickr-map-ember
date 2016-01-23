@@ -6,6 +6,8 @@
 @import 'utils';
 @import url(https://fonts.googleapis.com/css?family=Muli|Montserrat:400,700);
 
+@import 'components/main-nav';
+
 @include get_columns(12);
 
 *{

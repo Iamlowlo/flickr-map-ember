@@ -1,3 +1,7 @@
+@function em($pixels, $base_size:16){
+  @return  #{$pixels / $base_size}em;
+}
+
 @mixin get_columns ($grid){
   @each $bp,$bp_size in $break-points{
     @media(min-width:#{$bp_size}px){
