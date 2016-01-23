@@ -1,4 +1,5 @@
 /* jshint node: true */
+var flickrAPI = require('./flickrAPI');
 
 module.exports = function(environment) {
   var ENV = {
@@ -14,6 +15,25 @@ module.exports = function(environment) {
     },
 
     APP: {
+      flickr : flickrAPI,
+      locations : {
+        madrid : {
+          lat : '40.416721',
+          lng : '-3.703207'
+        },
+        barcelona : {
+          lat : '41.388022',
+          lng : '2.170010'
+        },
+        paris : {
+          lat : '48.856442',
+          lng : '2.347454'
+        },
+        london : {
+          lat : '51.507551',
+          lng : '-0.127709'
+        }
+      }
       // Here you can pass flags/options to your application instance
       // when it is created
     }
