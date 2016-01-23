@@ -1,6 +1,6 @@
 # Flickr-map-ember
 
-This is a small project to show how to code a web app in EmberJS.
+This is a small project to show how to code a web app in EmberJS.<br>
 It uses Flickr API, Google Maps API and Firebase.
 
 ## Prerequisites
@@ -15,7 +15,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone git@github.com:Iamlowlo/flickr-map-ember.git` this repository
-* cd flickr-map-ember
+* `cd flickr-map-ember`
 * `npm install`
 * `bower install`
 
