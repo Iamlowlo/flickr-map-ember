@@ -1,5 +1,6 @@
 /* jshint node: true */
 var flickrAPI = require('./flickrAPI');
+var gmapsAPI = require('./gmapsAPI');
 
 module.exports = function(environment) {
   var ENV = {
@@ -16,6 +17,7 @@ module.exports = function(environment) {
 
     APP: {
       flickr : flickrAPI,
+      gmaps : gmapsAPI,
       locations : {
         madrid : {
           lat : '40.416721',
