@@ -1,0 +1,104 @@
+@import 'components/ember-select';
+
+.form{
+  @extend %column_container;
+  @extend %clearfix;
+  .field{
+    float: left;
+    margin-bottom: 2em;
+  }
+  .label_tag{
+    display: block;
+    margin-bottom: 0.1em;
+    font-weight: 300;
+  }
+  input:not([type='checkbox']):not([type='checkbox']),
+  textarea{
+    width :100%;
+    margin-top: 0.1em;
+    padding: 0.2em 0.1em;
+    font-size: 1em;
+    font-weight: 300;
+    color: $color_2;
+  }
+  input,
+  textarea{
+    @include style-placeholder{
+      font-weight: 300;
+      color:transparent;
+    }
+  }
+  input{
+    border:none;
+    border-bottom: 1px solid $color_4;
+  }
+  textarea{
+    resize:vertical;
+    min-height: 4em;
+    border-color: $color_4;
+    padding: 0.3em 0.4em;
+  }
+  .unvalid{
+    position: relative;
+    input,
+    textarea,
+    select{
+      border-color: $red_alert;
+    }
+    .icon-keyboard_arrow_down{
+      color: $red_alert;
+    }
+    .unvalid_content{
+      position: absolute;
+      top: 0;
+      right: $column_gap;
+      color: $red_alert;
+      text-align: right;
+      font-weight: 300;
+      font-size: 0.9em;
+      &:hover{
+        z-index: 15;
+        .error_pool{
+          display: block;
+          opacity: 1;
+          border-color: $red_alert;
+        }
+      }
+    }
+    .icon-error_outline{
+      font-size: 1.2em;
+      cursor: pointer;
+      background: white;
+      border-radius: 100%;
+      margin-right: -1em;
+      margin-top: 0.3em;
+      display: inline-block;
+    }
+    .error_pool{
+      display: none;
+      opacity:0;
+      background: white;
+      padding: 1em 1.5em 0.5em;
+      border: 1px solid transparent;
+      transition:opacity 0.4s ease-in;
+    }
+    .error_msg{
+      margin-bottom: 0.5em;
+    }
+  }
+  .button_container{
+    clear: both;
+    padding-right:$column_gap; 
+    padding-left:$column_gap; 
+  }
+  @media (min-width: em(map-get($break-points,md))){
+    .label_tag{
+      display: none;
+    }
+    input{
+      @include style-placeholder{
+        color:rgba($polite_black,0.5);
+      }
+    }
+  }
+}

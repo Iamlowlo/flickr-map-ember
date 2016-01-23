@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'reset';
+@import 'fonts';
+@import 'mixins';
+@import 'forms';
+@import 'utils';
+@import url(https://fonts.googleapis.com/css?family=Muli|Montserrat:400,700);
+
+@include get_columns(12);
+
+*{
+	box-sizing:border-box;
+}
+h1{
+	font-size: 1.8em;
+	@extend %title_font;
+}
+h2{
+	font-size: 1.6em;
+	@extend %title_font;
+}
+h3{
+	font-size: 1.4em;
+	@extend %title_font;
+}
+body{
+	@extend %body_font;
+	color: $polite_black;
+	background: $polite_white;
+}
+a{
+	text-decoration: none;
+	color:$color_1;
+	&:visited{
+		color: $color_accent_1;
+	}
+}
+#main_header{
+	position: relative;
+	padding: 2em 2.5em 1.8em;
+	background: $color_4;
+	color: $polite_white;
+	border-top: 5px solid $color_3;
+	h1 a{
+		color: $polite_white;
+	}
+	.btn{
+		position: absolute;
+		bottom: 0.5em;
+		right: 2em;
+	}
+}
+#main_container{
+	padding: 1.8em 2.5em;
+}

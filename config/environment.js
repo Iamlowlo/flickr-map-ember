@@ -34,8 +34,17 @@ module.exports = function(environment) {
           lng : '-0.127709'
         }
       }
-      // Here you can pass flags/options to your application instance
-      // when it is created
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com",
+      'font-src': "'self' https://*.gstatic.com",
+      'connect-src': "'self' wss://*.firebaseio.com",
+      'img-src': "*",
+      'report-uri':"'localhost'",
+      'style-src': "'self' 'unsafe-inline' https://*.googleapis.com",
+      'frame-src': "https://www.youtube.com",
+      'child-src': "https://www.youtube.com"
     }
   };
 
