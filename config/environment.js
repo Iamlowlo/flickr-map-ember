@@ -42,7 +42,7 @@ module.exports = function(environment) {
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com",
       'font-src': "'self' https://*.gstatic.com",
       'connect-src': "'self' wss://*.firebaseio.com",
-      'img-src': "*",
+      'img-src': "* data:",
       'report-uri':"'localhost'",
       'style-src': "'self' 'unsafe-inline' https://*.googleapis.com",
       'frame-src': "https://www.youtube.com",
