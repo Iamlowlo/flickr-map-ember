@@ -7,6 +7,7 @@
 @import url(https://fonts.googleapis.com/css?family=Muli|Montserrat:400,700);
 
 @import 'components/main-nav';
+@import 'components/g-map';
 
 @include get_columns(12);
 
@@ -37,6 +38,11 @@ a{
 		color: $color_accent_1;
 	}
 }
+body > div{
+	display: flex;
+	flex-direction:column;
+	height: 100%;
+}
 #main_header{
 	position: relative;
 	padding: 2em 2.5em 1.8em;
@@ -52,6 +58,6 @@ a{
 		right: 2em;
 	}
 }
-#main_container{
-	padding: 1.8em 2.5em;
+#main_content{
+	flex-grow:1;
 }

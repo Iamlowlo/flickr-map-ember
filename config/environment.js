@@ -8,6 +8,9 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+    'g-map' : {
+      key : gmapsAPI.api_key
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -39,12 +42,12 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com",
-      'font-src': "'self' https://*.gstatic.com",
-      'connect-src': "'self' wss://*.firebaseio.com",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com http://*.googleapis.com http://*.gstatic.com",
+      'font-src': "'self' https://*.gstatic.com http://*.gstatic.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://api.flickr.com/",
       'img-src': "* data:",
       'report-uri':"'localhost'",
-      'style-src': "'self' 'unsafe-inline' https://*.googleapis.com",
+      'style-src': "'self' 'unsafe-inline' https://*.googleapis.com http://*.googleapis.com",
       'frame-src': "https://www.youtube.com",
       'child-src': "https://www.youtube.com"
     }

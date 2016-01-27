@@ -1,0 +1,7 @@
+{{yield}}
+<span class="icon-menu"></span>
+<ul>
+{{#each links as |link|}}
+<li> {{#link-to link.link}}{{link.label}}{{/link-to}}</li>
+{{/each}}
+</ul>

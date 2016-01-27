@@ -1,0 +1,14 @@
+#main_content{
+	display: flex;
+}
+.g-map{
+	display: flex;
+	flex-grow:1;
+}
+.g-map-canvas{
+	flex:1;
+}
+.btn{
+	position: absolute;
+	left: 0;
+}

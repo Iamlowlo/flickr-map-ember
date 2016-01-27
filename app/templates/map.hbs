@@ -1,0 +1,12 @@
+{{outlet}}
+{{#g-map lat=40.416721 lng=-3.703207 zoom=12 as |context|}}
+	{{#each pictures as |picture|}}
+	{{#g-map-marker context lat=picture.latitude lng=picture.longitude as |markerContext|}}
+	    {{#g-map-infowindow markerContext}}
+	      <img src="{{picture.url_s}}">
+	    {{/g-map-infowindow}}
+    {{/g-map-marker}}
+	{{/each}}
+{{/g-map}}
+<span class="btn primary" {{action "getPictures"}}>HUHUHU</span>
+{{log pictures}}
